@@ -1,11 +1,12 @@
-import { DocumentationLink, HeaderContainer } from './styles'
-import logo from '../../assets/images/logo.png'
+import { HeaderContainer, HeaderContent } from './styles'
+import Logo from '../../assets/images/Design sem nome.png'
 
 const Header = () => (
   <HeaderContainer>
-    <img src={logo} alt="Pokemon" />
-    <DocumentationLink href="#">Documentação</DocumentationLink>
+    <HeaderContent>
+      <img src={Logo} alt="Logo do Pokemon" />
+      <a href="#">Documentação</a>
+    </HeaderContent>
   </HeaderContainer>
 )
-
 export default Header
