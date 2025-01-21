@@ -1,27 +1,20 @@
-import { Card, InfoItem, InfoRow, PokemonImage } from './styles'
+import React from 'react'
+import { CardContainer } from './styles' // Garanta que o caminho para importação está correto.
 
-type Props = {
+interface Props {
   name: string
   image: string
-  type: string
-  category: string
+  types: string[]
+  onClick: () => void // Certifique-se de que o evento de clique seja passado corretamente.
 }
 
-const PokemonCard = ({ name, image, type, category }: Props) => {
-  return (
-    <Card>
-      <PokemonImage>
-        <img src={image} alt={name} />
-      </PokemonImage>
-      <InfoRow>
-        <InfoItem>{name}</InfoItem>
-        <InfoItem>{type}</InfoItem>
-      </InfoRow>
-      <InfoRow>
-        <InfoItem>{category}</InfoItem>
-      </InfoRow>
-    </Card>
-  )
-}
+const PokemonCard: React.FC<Props> = ({ name, image, types, onClick }) => (
+  <CardContainer onClick={onClick}>
+    {' '}
+    <img src={image} alt={name} />
+    <h2>{name}</h2>
+    <p>{types.join(', ')}</p>
+  </CardContainer>
+)
 
 export default PokemonCard

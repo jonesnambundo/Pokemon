@@ -1,32 +1,34 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
-export const Card = styled.div`
+export const CardContainer = styled.div`
+  transition: all 0.7s;
   width: 280px;
   height: 304px;
   border-radius: 12px;
-  background-color: #f9f9f9;
+  overflow: hidden;
+  text-align: center;
+  background-color: ${cores.branca};
   box-shadow: 0 1px 4px rgba(136, 56, 56, 0.44);
-`
 
-export const PokemonImage = styled.div`
-  width: 280px;
-  height: 208px;
-  background-color: #e0e0e0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-`
+  img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+  }
 
-export const InfoRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-left: 28px;
-  padding-top: 19px;
-`
-export const InfoItem = styled.div`
-  flex: 1;
-  font-size: 14px;
-  color: #666;
+  h2 {
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 13px;
+    color: ${cores.cinzaclaro};
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 19px;
+  }
 `

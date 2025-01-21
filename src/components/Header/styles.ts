@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
   background-color: ${cores.branca};
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: red;
 `
 
 export const HeaderContent = styled.div`
