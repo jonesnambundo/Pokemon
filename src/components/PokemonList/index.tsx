@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import PokemonCard from '../PokemonCard' // Verifique se o caminho está correto
-import { List, Modal, ModalContent } from './styles' // Importe suas estilizações
-import fechar from '../../assets/images/close.png' // Corrija o nome da imagem se necessário
+import PokemonCard from '../PokemonCard'
+import { List, Modal, ModalContent } from './styles'
+import fechar from '../../assets/images/close.png'
 
 interface Pokemon {
   name: string
   image: string
   types: string[]
-  onClick: () => void // Definindo que onClick é uma prop esperada
+  onClick: () => void
 }
 
 const PokemonList = () => {
@@ -18,7 +18,7 @@ const PokemonList = () => {
 
   useEffect(() => {
     axios
-      .get('https://pokeapi.co/api/v2/pokemon?limit=500')
+      .get('https://pokeapi.co/api/v2/pokemon?limit=100')
       .then(async (response) => {
         const fetchPokemons = response.data.results.map(
           async (pokemonSummary: any) => {

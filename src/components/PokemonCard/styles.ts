@@ -8,7 +8,6 @@ export const CardContainer = styled.div`
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  background-color: ${cores.branca};
   box-shadow: 0 1px 4px rgba(136, 56, 56, 0.44);
 
   img {

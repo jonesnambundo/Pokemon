@@ -6,22 +6,41 @@ export const cores = {
   cinzaligth: ' #D4D7DE',
   cinza: ' #979797',
   cinzaclaro: ' #7A7D80',
-  pretoligth: ' #4D5053',
-  brand_dark: '#212529',
-  brand_green: '#13ce66',
-  brand_pink: '#fe8bc4',
-  brand_red: '#ff0000 ',
-  brand_yellow: '#ffcb2c',
-  brand_orange: '#fd7d24',
+  pretoligth: ' #4D5053'
+}
 
-  darkest_gray: '#333333',
-  darker_gray: '#666666',
-  dark_gray: '#444444',
-  brand_gray: '#c2c2c2',
-  light_gray: '#dddddd',
-  lighter_gray: '#eeeeee',
-  lightest_gray: '#f2f2f2',
-  card_gray: '#495057'
+interface TypeColors {
+  [key: string]: string | undefined
+  water: string
+  grass: string
+  electric: string
+  psychic: string
+  ice: string
+  dragon: string
+  dark: string
+  fairy: string
+  ground: string
+  poison: string
+  bug: string
+}
+
+export const typeColors: TypeColors = {
+  fire: '#FDDFDF',
+  water: '#DEF3FD',
+  grass: '#DEFDE0',
+  electric: '#FCF7DE',
+  psychic: '#EAEDA1',
+  ice: '#F8FFFF',
+  dragon: '#97B3E6',
+  dark: '#707070',
+  fairy: '#FCEAFF',
+  ground: ' #eeab9d',
+  poison: '#b1e9bc',
+  bug: '#f8d5a3',
+  fighting: '#C22E28',
+  ghost: '#735797',
+  rock: '#B6A136',
+  steel: '#B7B7CE'
 }
 
 export const GlobalCss = createGlobalStyle`
